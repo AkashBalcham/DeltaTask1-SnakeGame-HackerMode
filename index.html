@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Snake Game</title>
+        <link rel="stylesheet" href="task1-h.css">        <!--Writing CSS in another file and bringing it into this html file-->
+    </head>
+
+    <body class = "screen" id = "disp">
+        <audio class = "eat-sound" src="../vine-boom-actual.mp4"></audio>
+
+        
+        <div class = "overlay">
+            <p class = "overlay-text">Game Paused!</p>
+            <div class = "play-holder">
+                <button class = "play-button" onclick = "resumeGame();">Resume</button>
+            </div>
+            
+        </div>
+        
+        
+
+
+        <div class = "popup-container">
+            <div class = "popup">
+                <p class = "prompt" id = "prompt-box">Enter grid size</p>
+                <input class = "grid-size-input" type="text" placeholder = "Enter grid size">
+                <button class = "sub" onclick = "
+                    gridSize = document.querySelector('.grid-size-input').value;
+                    //console.log(gridSize);
+                    //document.querySelector('.grid').style.width = (Number(gridSize)*20) + 'px';
+                    //document.querySelector('.grid').style.height = (Number(gridSize)*20) + 'px';
+                    /*
+                    console.log(document.querySelector('.grid').style.width, document.querySelector('.grid').style.height, 1);
+                    document.querySelector('.popup-container').style.display = 'none';
+                    rightLimit = Number(gridSize)*20;
+                    botLimit = Number(gridSize)*20;
+                    */
+                   setGridSize();
+
+                    //let x = setInterval(decTime, 1000);
+                ">Submit</button>
+            </div>
+        </div>
+        
+
+        <div class = "screen">
+            <div class = "display-top">                     <!--Text to be displayed at the top of the screen-->
+                <p class = "lives">&hearts;</p>
+                <p class = "score"></p>
+                <!--img class = "pause-button" src="../pause-button.png" alt="" onclick = "pauseGame();"-->
+                <button class = "poz-button" onclick = "pauseGame();">Pause</button>
+                <p class = "remTime"></p>
+                <p class = "highScore"></p>
+                
+            </div>
+            <div class = "container">                   
+                <div class = "grid">                        <!--500px x 500px grid-->
+                    
+                    <!--div class = "moving-obstacle"></div-->
+                    
+
+                    <!--Placing the snake and the food within the grid--> 
+                    <div class = "snake-pieces">
+                        <div class = "snake-head"></div>
+                        <div class = "snake-body"></div>
+                        <!--
+                            
+                            <div class = "snake-body-2 visible"></div>
+                            <div class = "snake-body-3 invisible"></div>
+                            <div class = "snake-body-4 invisible"></div>
+                            <div class = "snake-body-5 invisible"></div>
+                            <div class = "snake-body-6 invisible"></div>
+                            <div class = "snake-body-7 invisible"></div>
+                            <div class = "snake-body-8 invisible"></div>
+                        -->
+                        
+                        <div class = "snake-tail"></div>
+                        
+                    </div>       
+                    
+                    
+
+                    
+                    <div class = "foods">
+                        <!--
+                        <div class = "lightblue-food"></div>
+                        <div class = "purple-food"></div>
+                        <div class = "yellow-food"></div>
+                        <div class = "orange-food"></div>
+                        <div class = "red-food"></div>
+                        -->
+                    </div>
+                    
+                    
+                </div>
+            </div>
+
+            <!--Control buttons for the snake-->
+            <div class = "up-button">
+                <div class = "vert-up">
+                    <button class = "up" onclick="
+                        moveToUp();    
+                    ">Up</button>
+                </div>
+            </div>  
+
+            <div class = "left-right-button"> 
+                <div class = "hori">
+                    <button class = "left" onclick="
+                        moveToLeft();  
+                    ">Left</button>
+                    <button class = "right" onclick="
+                        moveToRight();
+                    ">Right</button>
+                </div>
+            </div>
+
+            <div>
+                <div class = "vert-down">
+                    <button class = "down" onclick="
+                        moveToDown(); 
+                        
+                    ">Down</button>
+                </div>
+            </div>        
+
+            <!--Showing the correct order of food colours at the bottom of the screen-->
+            <div class = "order">
+                <p class = "target-text">Target word</p>
+                <p class = "target-word"></p>
+            </div>
+        </div>
+        <script src="task1-h.js"></script>        <!--using our js code from task1.js-->
+    </body>
+</html>

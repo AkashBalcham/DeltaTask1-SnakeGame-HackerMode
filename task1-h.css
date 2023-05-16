@@ -1,0 +1,350 @@
+.game-start{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    background-color: rgba(200, 200, 200, 0.8);
+}
+
+
+.overlay{
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(200, 200, 200, 0.8);
+    z-index: 100000000;
+}
+
+
+
+.overlay-text{
+    top: 50%;
+    font-size: 50px;
+    text-align: center;
+    z-index: 101;
+    color: black;
+}
+
+.popup{
+    width: 300px;
+    height: 100px;
+    background-color: yellow;
+    opacity: 1;
+    padding-left: 20px;
+    border-radius: 7px;
+}
+
+.popup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.sub{
+    width: 60px;
+    padding-left: 8px;
+    padding-right: 20px;
+    border-radius: 10px;
+    border-width: 1px;
+    transition: 0.1s;
+}
+
+.sub:hover{
+    background-color: rgb(0, 200, 0);
+    color: white;
+    cursor: pointer;
+}
+
+body{
+    background-color: rgb(0, 0, 50);    /*setting the webpage colour to dark blue*/
+}
+
+p {
+    font-size: 20px;            
+    color: white;
+    font-family: Segoe UI;
+}
+
+.prompt{
+    color: black;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.message {
+    margin-bottom: 0;
+}
+.final-score{
+    margin-top: 0;
+}
+
+.grid-size-input{
+    width: 200px;
+    height: 25px;
+    border-radius: 20px;
+    padding-left: 10px;
+    border-width: 1px;
+}
+
+button{
+    width: 50px;
+    height: 30px;
+}
+
+.poz-button{
+    width: 70px;
+    transition: 0.1s;
+}
+
+.poz-button:hover {
+    cursor: pointer;
+    background-color: rgb(255, 77, 77);
+}
+
+.play-button{
+    width: 200px;
+    height: 100px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.play-button:hover {
+    background-color: lightgreen;
+    border-width: 1px;
+}
+
+.play-holder{
+    display: flex;
+    justify-content: center;
+}
+
+.pause-button{
+    transform: scale(0.1, 0.1);
+}
+
+.display-top{               
+    display: flex;                      /*Setting the text on top of the screen to be evenly spaced*/
+    justify-content: space-between;
+    height: 70px;
+    align-items: center;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hori{
+    display: flex;
+    justify-content: center;
+}
+
+.left{
+    margin-right: 12px;
+}
+
+.right{
+    margin-left: 12px;
+}
+.vert-up{
+    display: flex;
+    justify-content: center;
+}
+
+.vert-down{
+    display: flex;
+    justify-content: center;
+}
+.snake-head {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(0, 255, 0);
+    left: 40;
+    top: 0;
+    z-index: 100;
+}
+.snake-body{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: green;
+    left: 20;
+    top: 0;
+    z-index: 100;
+}
+.snake-tail{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: green;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+
+.added-piece{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: green;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+
+#power-up {
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+}
+
+
+.grid{                              /*500 x 500 grid of black colour*/
+    width: 500px;
+    height: 500px;
+    background-color: black;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.uneaten-food{
+    position: absolute;
+    color: white;
+    width: 20px;
+    height: 20px;
+}
+
+.eaten-food {
+    display: none;
+    z-index: 0;
+}
+
+.target-text{
+    text-align: center;
+}
+
+.target-word{
+    text-align: center;
+}
+
+.lightblue-food{
+    position: absolute;
+    background-color: lightblue;
+    width: 20px;
+    height: 20px;
+    left: 0;
+    top: 0;
+}
+
+.purple-food{
+    position: absolute;
+    background-color: purple;
+    width: 20px;
+    height: 20px;
+    left: 0;
+    top: 0;
+}
+
+.yellow-food{
+    position: absolute;
+    background-color: yellow;
+    width: 20px;
+    height: 20px;
+    left: 0;
+    top: 0;
+}
+
+.orange-food{
+    position: absolute;
+    background-color: orange;
+    width: 20px;
+    height: 20px;
+    left: 0;
+    top: 0;
+}
+
+.red-food{
+    position: absolute;
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    left: 0;
+    top: 0;
+}
+
+.order-text, .message, .final-score{
+    text-align: center;
+}
+
+.message, .final-score {
+    color: rgb(0, 255, 0);
+}
+.colors-order{
+    display: flex;
+    justify-content: center;
+}
+
+.lightblue-food-display{
+    display: inline-block;
+    background-color: lightblue;
+    width: 20px;
+    height: 20px;
+    left: 0;
+    top: 0;
+    margin-right: 5px;
+}
+
+.purple-food-display{
+    display: inline-block;
+    background-color: purple;
+    width: 20px;
+    height: 20px;
+    left: 0;
+    top: 0;
+    margin-right: 5px;
+}
+
+.yellow-food-display{
+    display: inline-block;
+    background-color: yellow;
+    width: 20px;
+    height: 20px;
+    left: 0;
+    top: 0;
+    margin-right: 5px;
+}
+
+.orange-food-display{
+    display: inline-block;
+    background-color: orange;
+    width: 20px;
+    height: 20px;
+    left: 0;
+    top: 0;
+    margin-right: 5px;
+}
+
+.red-food-display{
+    display: inline-block;
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    left: 0;
+    top: 0;
+    margin-right: 5px;
+}
+
+.life-left-1, .life-left-2, .life-left-3{
+    color: red;
+}
+
+.life-lost {
+    color: rgb(0, 0, 50);
+}
